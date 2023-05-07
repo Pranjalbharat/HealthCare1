@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">HealthCare</string>
+    <string name="yes_button_description">Yes</string>
+    <string name="no_button_description">No</string>
+    <string name="usershould">User should seek medical advice.</string>
+    <string name="suggested_doc">Suggested Doctors</string>
+    <string name="name_">Name</string>
+    <string name="report">Report</string>
+    <string name="age_text">Age</string>
+    <string name="gender_text">Gender</string>
+    <string name="past_reports_amp_treatments"><![CDATA[Past Reports & Treatments]]></string>
+    <string name="potential_illness">Potential Illness</string>
+    <string name="potential_symptoms">Potential Symptoms:</string>
+    <string name="symptom_1">Symptom_1</string>
+    <string name="symptom_2">Symptom_2</string>
 </resources>
