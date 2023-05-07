@@ -13,4 +13,6 @@
     <string name="potential_symptoms">Potential Symptoms:</string>
     <string name="symptom_1">Symptom_1</string>
     <string name="symptom_2">Symptom_2</string>
+    <string name="take_a_short_3_min_symptom_assessment_the_information_you_give_is_safe_and_won_t_be_shared_your_results_will_include_possible_causes_of_symptoms_recommendations_on_what_to_do_next">Take a short (3 min) symptom assessment. The information you give is safe and won’t be shared.\n  >Your results will include: Possible causes of symptoms. \n  >Recommendations on what to do next.</string>
+    <string name="before_using_the_checkup_please_read_the_terms_of_service_and_remember_checkup_isn_t_a_diagnosis_it_s_only_for_your_information_and_not_a_qualified_medical_opinion_checkup_isn_t_for_emergencies_call_your_local_emergency_number_right_away_when_there_s_a_health_emergency_your_data_is_safe_the_information_you_give_won_t_be_shared_or_used_to_identify_you">Before using the checkup, please read the Terms of Service and remember:\n   >Checkup isn’t a diagnosis. It’s only for your information and not a qualified medical opinion.\n  >Checkup isn’t for emergencies.\n  >Call your local emergency number right away when there’s a health emergency.\n   >Your data is safe.\n   >The information you give won’t be shared or used to identify you.</string>
 </resources>

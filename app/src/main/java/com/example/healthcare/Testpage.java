@@ -28,12 +28,12 @@ public class Testpage extends AppCompatActivity {
 
 
 
-        // onlick start test
+        // on-click start test
         Start=findViewById(R.id.start_test_button);
         Start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Testpage.this ,analysis.class));
+                startActivity(new Intent(Testpage.this ,Notice.class));
             }
         });
 

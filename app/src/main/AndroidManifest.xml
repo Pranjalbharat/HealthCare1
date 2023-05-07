@@ -12,6 +12,12 @@
         android:theme="@style/Theme.HealthCare"
         tools:targetApi="31">
         <activity
+            android:name=".Notice"
+            android:exported="false" />
+        <activity
+            android:name=".Detail_Input"
+            android:exported="false" />
+        <activity
             android:name=".Report"
             android:exported="false" />
         <activity

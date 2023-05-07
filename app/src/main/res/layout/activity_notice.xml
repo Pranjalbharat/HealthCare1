@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/question_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp">
+
+
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:text="Take a quick Test"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:padding="16dp"/>
+
+        <TextView
+            android:id="@+id/question_text1"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:text="@string/take_a_short_3_min_symptom_assessment_the_information_you_give_is_safe_and_won_t_be_shared_your_results_will_include_possible_causes_of_symptoms_recommendations_on_what_to_do_next"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="18dp"
+            android:textStyle="normal"
+            android:gravity="left"
+            android:layout_marginTop="60dp"
+            android:padding="16dp"/>
+
+        <TextView
+        android:id="@+id/question_text2"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:text="@string/before_using_the_checkup_please_read_the_terms_of_service_and_remember_checkup_isn_t_a_diagnosis_it_s_only_for_your_information_and_not_a_qualified_medical_opinion_checkup_isn_t_for_emergencies_call_your_local_emergency_number_right_away_when_there_s_a_health_emergency_your_data_is_safe_the_information_you_give_won_t_be_shared_or_used_to_identify_you"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        android:gravity="left"
+        android:layout_marginTop="210dp"
+        android:padding="16dp"/>
+
+        <Button
+            android:id="@+id/continue_"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Continue"
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:textSize="16sp"
+            android:background="@drawable/round_button"
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

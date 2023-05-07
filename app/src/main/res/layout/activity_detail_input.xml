@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/question_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="150dp"
+        android:paddingBottom="50dp">
+
+        <View
+            android:layout_width="380dp"
+            android:layout_height="150dp"
+            android:background="@drawable/rectangle_9"
+            android:gravity="center"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:text="What is your favorite color?"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp"/>
+
+        <Button
+            android:id="@+id/my_button"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="82dp"
+            android:background="@drawable/circular_button_bg"
+            android:text="Yes"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/my_button2"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="82dp"
+            android:background="@drawable/circular_button_bg"
+            android:text="No"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
