@@ -33,7 +33,7 @@
             <TextView
                 android:id="@+id/suggested_doctor_text"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="75dp"
                 android:background="@color/black"
                 android:gravity="center"
                 android:padding="16dp"
@@ -47,7 +47,7 @@
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginBottom="400dp"
+                android:layout_marginBottom="20dp"
                 android:background="@color/black"
                 android:scrollbars="none">
 
@@ -73,10 +73,11 @@
                             android:background="@color/black"
                             android:padding="8dp">
 
-                            <ImageView
+                            <ImageButton
                                 android:id="@+id/imageview"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
+                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/user" />
@@ -111,10 +112,11 @@
                             android:background="@color/black"
                             android:padding="8dp">
 
-                            <ImageView
+                            <ImageButton
                                 android:id="@+id/imageview2"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
+                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/user" />
@@ -148,10 +150,11 @@
                             android:background="@color/black"
                             android:padding="8dp">
 
-                            <ImageView
+                            <ImageButton
                                 android:id="@+id/imageview3"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
+                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/user" />
@@ -185,10 +188,11 @@
                             android:background="@color/black"
                             android:padding="8dp">
 
-                            <ImageView
+                            <ImageButton
                                 android:id="@+id/imageview4"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
+                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/user" />
@@ -222,10 +226,11 @@
                             android:background="@color/black"
                             android:padding="8dp">
 
-                            <ImageView
+                            <ImageButton
                                 android:id="@+id/imageview5"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
+                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/user" />
@@ -259,10 +264,11 @@
                             android:background="@color/black"
                             android:padding="8dp">
 
-                            <ImageView
+                            <ImageButton
                                 android:id="@+id/imageview51"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
+                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/user" />
@@ -296,10 +302,11 @@
                             android:background="@color/black"
                             android:padding="8dp">
 
-                            <ImageView
+                            <ImageButton
                                 android:id="@+id/imageview6"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
+                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/user" />
@@ -333,10 +340,11 @@
                             android:background="@color/black"
                             android:padding="8dp">
 
-                            <ImageView
+                            <ImageButton
                                 android:id="@+id/imageview7"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
+                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/user" />
@@ -370,10 +378,11 @@
                             android:background="@color/black"
                             android:padding="8dp">
 
-                            <ImageView
+                            <ImageButton
                                 android:id="@+id/imageview8"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
+                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/user" />
@@ -427,14 +436,14 @@
 
 
                     <!-- Name EditText -->
-                    <EditText
+                    <TextView
                         android:id="@+id/editTextName"
                         android:layout_width="270dp"
                         android:layout_height="44dp"
                         android:hint="Name" />
 
                     <!-- Profession EditText -->
-                    <EditText
+                    <TextView
                         android:id="@+id/editTextProfession"
                         android:layout_width="270dp"
                         android:layout_height="44dp"
@@ -450,17 +459,19 @@
                 android:id="@+id/post_image"
                 android:layout_width="410dp"
                 android:layout_height="250dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/sample_post1" />
 
             <LinearLayout
-                android:layout_width="348dp"
+                android:layout_width="346dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageButton
@@ -468,7 +479,7 @@
                     android:layout_width="2dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@color/white"
+                    android:background="@drawable/rectangle_background"
                     android:scaleType="fitCenter"
                     android:tag="like"
                     app:srcCompat="@drawable/blank_heart_like" />
@@ -478,12 +489,109 @@
                     android:layout_width="20dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/share_button" />
+
+                <ImageButton
+                    android:id="@+id/report1"
+                    android:layout_width="5dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_background"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/report"
+                     />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <!-- Circular ImageButton -->
+                <ImageButton
+                    android:id="@+id/btnCircular1"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/ellipse_2"
+                    android:padding="8dp"
+                    android:src="@drawable/ellipse_2" />
+
+
+                <!-- Nested LinearLayout for Name and Profession -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <!-- Name EditText -->
+                    <TextView
+                        android:id="@+id/editTextName1"
+                        android:layout_width="270dp"
+                        android:layout_height="44dp"
+                        android:hint="Name" />
+
+                    <!-- Profession EditText -->
+                    <TextView
+                        android:id="@+id/editTextProfession1"
+                        android:layout_width="270dp"
+                        android:layout_height="44dp"
+                        android:hint="Profession" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/post_image1"
+                android:layout_width="410dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/sample_post1" />
+
+            <LinearLayout
+                android:layout_width="346dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/like_post2"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:scaleType="fitCenter"
+                    android:tag="like"
+                    app:srcCompat="@drawable/blank_heart_like" />
+
+                <ImageButton
+                    android:id="@+id/imageView1"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/share_button" />
 
                 <Button
-                    android:id="@+id/report1"
+                    android:id="@+id/report11"
                     android:layout_width="5dp"
                     android:layout_height="48dp"
                     android:layout_gravity="center"
