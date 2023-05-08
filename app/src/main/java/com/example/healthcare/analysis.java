@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class analysis extends AppCompatActivity {
 
@@ -15,6 +16,7 @@ public class analysis extends AppCompatActivity {
     private TextView Question;
     private Boolean Response;
     private int i=0;
+    private int phase=1;
 
     private String Question_current;
     private int Health_Score=10;
@@ -50,8 +52,7 @@ public class analysis extends AppCompatActivity {
     private int Artheries = 0;
 
     private String questions[] = {"is Your Mood Off?","Are you experiencing any physical symptoms such as pain, fever, cough, or fatigue?","Are you experiencing persistent feelings of sadness, hopelessness, or emptiness that interfere with your daily life?"};
-    private Boolean response_array_1[] = new Boolean[10];
-    private Boolean response_array_2[] = new Boolean[10];
+    private Boolean answers[] = new Boolean[10];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,90 +69,37 @@ public class analysis extends AppCompatActivity {
         Yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Response = true;
-                analyse(Response);
+                Response=true;
+                saveAnswer();
+                displayNextQuestion();
             }
         });
         No.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Response = false;
-                analyse(Response);
+                Response=false;
+                saveAnswer();
+                displayNextQuestion();
             }
         });
 
 
     }
 
-    void analyse(Boolean Response) {
-        response_array_1[i]= Response;
-        Question = findViewById(R.id.question_text);
-        if(Response){
-            Health_Score--;
-        }
-
-        if(i==3){
-            Question.setText(".....");
-            i=0;
-
-
-            // mood factor
-            if(response_array_1[0]){
-                Health_Score--;
-            }
-            else{
-                Health_Score++;
-            }
-
-
-            if(response_array_1[1]==response_array_1[2]){
-                // mixture of physical and mental illness
-            }
-
-            if(response_array_1[1]!=response_array_1[2]){
-                if(response_array_1[1]){
-                    //physical illness
-                    physical_illness();
-                }
-                else{
-                    //mental illness
-                    mental_illness();
-                }
-            }
-
-
-        }
-
-
-        i++;
+    private void displayQuestion() {
         Question.setText(questions[i]);
     }
-
-    void physical_illness(){
-        Question = findViewById(R.id.question_text);
-        Question.setText(Viral_Array[i]);
+    private void saveAnswer() {
+        Boolean answer = Response;
+        answers[i] = answer;
     }
-
-    void mental_illness(){
-        Question = findViewById(R.id.question_text);
-        Question.setText(Trauma_Array[i]);
-//
-//        Yes = findViewById(R.id.my_button);
-//        No = findViewById(R.id.my_button2);
-//        Yes.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                response_array_2[i] = true;
-//            }
-//        });
-//        No.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                response_array_2[i] = true;
-//            }
-//        });
-
-
-
+    private void displayNextQuestion() {
+        if (i < questions.length - 1) {
+            i++;
+            displayQuestion();
+        } else {
+            // All questions have been answered, do something with the answers here
+            Toast.makeText(this, "All questions have been answered", Toast.LENGTH_SHORT).show();
+        }
     }
 }
