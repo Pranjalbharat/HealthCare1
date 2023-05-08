@@ -8,19 +8,551 @@
     tools:context=".HomePage">
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_marginBottom="584dp"
+        android:layout_height="match_parent"
         android:background="@color/black"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <!-- Add your content here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+
+            <TextView
+                android:id="@+id/suggested_doctor_text"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Suggested Doctor"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="400dp"
+                android:background="@color/black"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!-- First CardView -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/black"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/imageview"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/user" />
+
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview"
+                                android:layout_centerHorizontal="true"
+                                android:text="John Doe"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Second CardView -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/imageview2"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/user" />
+
+                            <TextView
+                                android:id="@+id/name2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/imageview2"
+                                android:layout_centerHorizontal="true"
+                                android:text="Jane Doe"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/imageview3"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/user" />
+
+                            <TextView
+                                android:id="@+id/name3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview3"
+                                android:layout_centerHorizontal="true"
+                                android:text="John Doe"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/imageview4"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/user" />
+
+                            <TextView
+                                android:id="@+id/name4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview4"
+                                android:layout_centerHorizontal="true"
+                                android:text="John Doe"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/imageview5"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/user" />
+
+                            <TextView
+                                android:id="@+id/name5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview5"
+                                android:layout_centerHorizontal="true"
+                                android:text="John Doe"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/imageview51"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/user" />
+
+                            <TextView
+                                android:id="@+id/name51"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview51"
+                                android:layout_centerHorizontal="true"
+                                android:text="John Doe"
+                                android:textColor="@color/white"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/imageview6"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/user" />
+
+                            <TextView
+                                android:id="@+id/name6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview6"
+                                android:layout_centerHorizontal="true"
+                                android:text="John Doe"
+                                android:textColor="@color/white"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/imageview7"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/user" />
+
+                            <TextView
+                                android:id="@+id/name7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview7"
+                                android:layout_centerHorizontal="true"
+                                android:text="John Doe"
+                                android:textColor="@color/white"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/imageview8"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/user" />
+
+                            <TextView
+                                android:id="@+id/name8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview8"
+                                android:layout_centerHorizontal="true"
+                                android:text="John Doe"
+                                android:textColor="@color/white"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Add more CardViews as needed -->
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Circular ImageButton -->
+                <ImageButton
+                    android:id="@+id/btnCircular"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/ellipse_2"
+                    android:padding="8dp"
+                    android:src="@drawable/ellipse_2" />
+
+
+                <!-- Nested LinearLayout for Name and Profession -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <!-- Name EditText -->
+                    <EditText
+                        android:id="@+id/editTextName"
+                        android:layout_width="270dp"
+                        android:layout_height="44dp"
+                        android:hint="Name" />
+
+                    <!-- Profession EditText -->
+                    <EditText
+                        android:id="@+id/editTextProfession"
+                        android:layout_width="270dp"
+                        android:layout_height="44dp"
+                        android:hint="Profession" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/post_image"
+                android:layout_width="410dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/sample_post1" />
+
+            <LinearLayout
+                android:layout_width="348dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/like_post1"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:scaleType="fitCenter"
+                    android:tag="like"
+                    app:srcCompat="@drawable/blank_heart_like" />
+
+                <ImageButton
+                    android:id="@+id/imageView8"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/share_button" />
+
+                <Button
+                    android:id="@+id/report1"
+                    android:layout_width="5dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Report"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:title=""
-        tools:ignore="MissingConstraints">
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageButton
+            android:id="@+id/chat_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="start"
+            android:background="@color/black"
+            android:src="@drawable/ic_chatbox" />
+
+        <Button
+            android:id="@+id/center_button"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_background"
+            android:padding="5dp"
+            android:text="TEST"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/report_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="end"
+            android:adjustViewBounds="false"
+            android:background="@color/black"
+            android:src="@drawable/ic_report" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
 
         <ImageView
@@ -39,164 +571,6 @@
             android:src="@drawable/ic_notifiaction" />
 
     </androidx.appcompat.widget.Toolbar>
-
-    <TextView
-        android:id="@+id/suggested_doctor_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="516dp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="Suggested Doctor"
-        android:textColor="@color/white"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/footer_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="570dp"
-        android:background="@color/black"
-        android:elevation="4dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/chat_button"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center_vertical"
-            android:background="@color/black"
-            android:src="@drawable/ic_chatbox" />
-
-        <Button
-            android:id="@+id/center_button"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/button_background"
-            android:padding="5dp"
-            android:text="TEST"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-        <ImageButton
-            android:id="@+id/report_button"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center_vertical|end"
-            android:background="@color/black"
-            android:src="@drawable/ic_report" />
-    </LinearLayout>
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginBottom="270dp"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toTopOf="@+id/footer_layout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:orientation="horizontal">
-
-            <!-- First CardView -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardview1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="4dp">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp">
-
-                    <ImageView
-                        android:id="@+id/imageview1"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:layout_centerHorizontal="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/profile_image" />
-
-                    <TextView
-                        android:id="@+id/name1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/imageview1"
-                        android:layout_centerHorizontal="true"
-                        android:text="John Doe"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                </RelativeLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- Second CardView -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardview2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="4dp">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp">
-
-                    <ImageView
-                        android:id="@+id/imageview2"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:layout_centerHorizontal="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/profile_image" />
-
-                    <TextView
-                        android:id="@+id/name2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/imageview2"
-                        android:layout_centerHorizontal="true"
-                        android:text="Jane Doe"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                </RelativeLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- Add more CardViews as needed -->
-
-        </LinearLayout>
-
-    </HorizontalScrollView>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
