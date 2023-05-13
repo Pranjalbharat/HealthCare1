@@ -22,7 +22,7 @@
         <!-- Add your content here -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/black"
             android:orientation="vertical">
 
@@ -74,10 +74,11 @@
                                 android:id="@+id/imageview"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
+
                                 android:layout_centerHorizontal="true"
+                                android:background="@drawable/circular_button_background"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/user" />
+                                android:src="@drawable/d1" />
 
                             <TextView
                                 android:id="@+id/name"
@@ -85,7 +86,7 @@
                                 android:layout_height="35dp"
                                 android:layout_below="@id/imageview"
                                 android:layout_centerHorizontal="true"
-                                android:text="John Doe"
+                                android:text="Sayanee Saha"
                                 android:textColor="@color/white"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -113,10 +114,10 @@
                                 android:id="@+id/imageview2"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
+                                android:background="@drawable/circular_button_background"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/user" />
+                                android:src="@drawable/d2" />
 
                             <TextView
                                 android:id="@+id/name2"
@@ -124,7 +125,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/imageview2"
                                 android:layout_centerHorizontal="true"
-                                android:text="Jane Doe"
+                                android:text="Bharat Kukreti"
                                 android:textColor="@color/white"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
@@ -154,7 +155,7 @@
                                 android:background="@color/black"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/user" />
+                                android:src="@drawable/d3" />
 
                             <TextView
                                 android:id="@+id/name3"
@@ -162,9 +163,9 @@
                                 android:layout_height="35dp"
                                 android:layout_below="@id/imageview3"
                                 android:layout_centerHorizontal="true"
-                                android:text="John Doe"
+                                android:text="Dr Neha Chandrakar"
                                 android:textColor="@color/white"
-                                android:textSize="15sp"
+                                android:textSize="12sp"
                                 android:textStyle="bold" />
 
                         </RelativeLayout>
@@ -192,7 +193,7 @@
                                 android:background="@color/black"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/user" />
+                                android:src="@drawable/d4" />
 
                             <TextView
                                 android:id="@+id/name4"
@@ -200,7 +201,7 @@
                                 android:layout_height="35dp"
                                 android:layout_below="@id/imageview4"
                                 android:layout_centerHorizontal="true"
-                                android:text="John Doe"
+                                android:text="Dr. Tarushi Arora "
                                 android:textColor="@color/white"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -230,7 +231,7 @@
                                 android:background="@color/black"
                                 android:layout_centerHorizontal="true"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/user" />
+                                android:src="@drawable/d5" />
 
                             <TextView
                                 android:id="@+id/name5"
@@ -238,7 +239,7 @@
                                 android:layout_height="35dp"
                                 android:layout_below="@id/imageview5"
                                 android:layout_centerHorizontal="true"
-                                android:text="John Doe"
+                                android:text="Sangya Singh"
                                 android:textColor="@color/white"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -246,6 +247,201 @@
                         </RelativeLayout>
 
                     </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageButton
+                                android:id="@+id/imageview6"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:background="@color/black"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/d6" />
+
+                            <TextView
+                                android:id="@+id/name6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview6"
+                                android:layout_centerHorizontal="true"
+                                android:text="Leena Gautam"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageButton
+                                android:id="@+id/imageview7"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:background="@color/black"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/d7" />
+
+                            <TextView
+                                android:id="@+id/name7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview7"
+                                android:layout_centerHorizontal="true"
+                                android:text="Dr.DEVENDRA NATH"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageButton
+                                android:id="@+id/imageview8"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:background="@color/black"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/d8" />
+
+                            <TextView
+                                android:id="@+id/name8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview8"
+                                android:layout_centerHorizontal="true"
+                                android:text="Kritika Pathak"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageButton
+                                android:id="@+id/imageview9"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:background="@color/black"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/d9" />
+
+                            <TextView
+                                android:id="@+id/name9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview9"
+                                android:layout_centerHorizontal="true"
+                                android:text="Radhika tomar"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="8dp">
+
+                            <ImageButton
+                                android:id="@+id/imageview10"
+                                android:layout_width="64dp"
+                                android:layout_height="50dp"
+                                android:background="@color/black"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/d0" />
+
+                            <TextView
+                                android:id="@+id/name10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@id/imageview10"
+                                android:layout_centerHorizontal="true"
+                                android:text="Bhawesh Pangaria"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
 
                     <!-- Add more CardViews as needed -->
 
@@ -290,7 +486,7 @@
                             android:id="@+id/TextName1"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/name_"
+                            android:text="Kritika Pathak"
                             android:textColor="@color/white" />
 
                         <!-- Profession EditText -->
@@ -298,7 +494,7 @@
                             android:id="@+id/TextProfession1"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/profession"
+                            android:text="Junior Resident Doctor"
                             android:textColor="@color/white" />
 
 
@@ -316,7 +512,7 @@
                     android:layout_weight="1"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/sample_post1" />
+                    app:srcCompat="@drawable/post1" />
 
                 <LinearLayout
                     android:id="@+id/post_buttons1"
@@ -394,7 +590,7 @@
                             android:id="@+id/TextName2"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/name_"
+                            android:text="Leena Gautam"
                             android:textColor="@color/white" />
 
                         <!-- Profession EditText -->
@@ -402,7 +598,7 @@
                             android:id="@+id/TextProfession2"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/profession"
+                            android:text=" Ayurvedic Doctor"
                             android:textColor="@color/white" />
 
 
@@ -420,7 +616,7 @@
                     android:layout_weight="1"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/sample_post1" />
+                    app:srcCompat="@drawable/post3" />
 
                 <LinearLayout
                     android:id="@+id/post_buttons2"
@@ -498,7 +694,7 @@
                             android:id="@+id/TextName3"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/name_"
+                            android:text="Dr. Tarushi Arora"
                             android:textColor="@color/white" />
 
                         <!-- Profession EditText -->
@@ -506,7 +702,7 @@
                             android:id="@+id/TextProfession3"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/profession"
+                            android:text="Pharmacokinetic, Doctor of Pharmacy"
                             android:textColor="@color/white" />
 
 
@@ -524,7 +720,7 @@
                     android:layout_weight="1"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/sample_post1" />
+                    app:srcCompat="@drawable/post4" />
 
                 <LinearLayout
                     android:id="@+id/post_buttons3"
@@ -602,7 +798,7 @@
                             android:id="@+id/TextName4"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/name_"
+                            android:text="Dr Neha Chandrakar"
                             android:textColor="@color/white" />
 
                         <!-- Profession EditText -->
@@ -610,7 +806,7 @@
                             android:id="@+id/TextProfession4"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/profession"
+                            android:text="Ophthalmologist and Oculoplastic surgeon"
                             android:textColor="@color/white" />
 
 
@@ -628,7 +824,7 @@
                     android:layout_weight="1"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/sample_post1" />
+                    app:srcCompat="@drawable/post6" />
 
                 <LinearLayout
                     android:id="@+id/post_buttons4"
@@ -706,7 +902,7 @@
                             android:id="@+id/TextName5"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/name_"
+                            android:text="Sayanee Saha"
                             android:textColor="@color/white" />
 
                         <!-- Profession EditText -->
@@ -714,7 +910,7 @@
                             android:id="@+id/TextProfession5"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/profession"
+                            android:text="Obstetrician and Gynaecologist"
                             android:textColor="@color/white" />
 
 
@@ -732,7 +928,7 @@
                     android:layout_weight="1"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/sample_post1" />
+                    app:srcCompat="@drawable/post8" />
 
                 <LinearLayout
                     android:id="@+id/post_buttons5"
@@ -810,7 +1006,7 @@
                             android:id="@+id/TextName6"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/name_"
+                            android:text="Dr.DEVENDRA NATH SINGH "
                             android:textColor="@color/white" />
 
                         <!-- Profession EditText -->
@@ -818,7 +1014,7 @@
                             android:id="@+id/TextProfession6"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/profession"
+                            android:text="Medical Doctor at Govt. of India"
                             android:textColor="@color/white" />
 
 
@@ -836,7 +1032,7 @@
                     android:layout_weight="1"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/sample_post1" />
+                    app:srcCompat="@drawable/post7" />
 
                 <LinearLayout
                     android:id="@+id/post_buttons6"
@@ -914,7 +1110,7 @@
                             android:id="@+id/TextName7"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/name_"
+                            android:text="Sangya Singh "
                             android:textColor="@color/white" />
 
                         <!-- Profession EditText -->
@@ -922,7 +1118,7 @@
                             android:id="@+id/TextProfession7"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/profession"
+                            android:text="Doctor of Philosophy "
                             android:textColor="@color/white" />
 
 
@@ -940,7 +1136,7 @@
                     android:layout_weight="1"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/sample_post1" />
+                    app:srcCompat="@drawable/post9" />
 
                 <LinearLayout
                     android:id="@+id/post_buttons7"
@@ -1018,7 +1214,7 @@
                             android:id="@+id/TextName8"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/name_"
+                            android:text="Bharat Kukreti "
                             android:textColor="@color/white" />
 
                         <!-- Profession EditText -->
@@ -1026,7 +1222,7 @@
                             android:id="@+id/TextProfession8"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/profession"
+                            android:text="Cardiologist"
                             android:textColor="@color/white" />
 
 
@@ -1044,7 +1240,7 @@
                     android:layout_weight="1"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/sample_post1" />
+                    app:srcCompat="@drawable/post10" />
 
                 <LinearLayout
                     android:id="@+id/post_buttons8"
@@ -1122,7 +1318,7 @@
                             android:id="@+id/TextName9"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/name_"
+                            android:text="Radhika tomar "
                             android:textColor="@color/white" />
 
                         <!-- Profession EditText -->
@@ -1130,7 +1326,7 @@
                             android:id="@+id/TextProfession9"
                             android:layout_width="270dp"
                             android:layout_height="18dp"
-                            android:text="@string/profession"
+                            android:text="Medical Doctor"
                             android:textColor="@color/white" />
 
 
@@ -1148,7 +1344,7 @@
                     android:layout_weight="1"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/sample_post1" />
+                    app:srcCompat="@drawable/post11" />
 
                 <LinearLayout
                     android:id="@+id/post_buttons9"

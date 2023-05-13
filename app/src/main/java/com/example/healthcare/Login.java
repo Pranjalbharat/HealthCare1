@@ -77,13 +77,13 @@ public class Login extends AppCompatActivity {
                 if(TextUtils.isEmpty(text_password)){
                     password.setError("Empty Credentials");
                 }
-//                else if(!isEmail(email)){
-//                    email.setError("Email address is not correct.");
-//                }
+                else if(!isEmail(email)){
+                    email.setError("Email address is not correct.");
+                }
                 else if(text_password.length() <6){
                     password.setError("password too short");
                 }else{
-                    loginUser(auth,text_email,text_password);
+                    loginUser(text_email,text_password);
                 }
             }
         });
@@ -96,19 +96,20 @@ public class Login extends AppCompatActivity {
 
     }
 
-//    boolean isEmail(EditText text) {
-//        String email = text.getText().toString();
-//        return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
-//    }
+    boolean isEmail(EditText text) {
+        String email = text.getText().toString();
+        return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
+    }
 
 
-    private void loginUser(FirebaseAuth auth,String email, String password) {
+    private void loginUser(String email, String password) {
         auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
                     // Launch welcome activity
+                    Toast.makeText(Login.this,"Registerd successfully",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Login.this, Welcome.class);
                     startActivity(intent);
                     finish();
