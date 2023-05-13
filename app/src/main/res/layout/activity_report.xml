@@ -19,11 +19,22 @@
             <TextView
                 android:id="@+id/usershould"
                 android:layout_width="320dp"
-                android:layout_height="124dp"
+                android:layout_height="60dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 android:text="@string/user_should"
+                android:textAppearance="@style/name_3" />
+            <TextView
+                android:id="@+id/Disease"
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:layout_alignTop="@id/usershould"
+                android:layout_marginTop="20dp"
+                android:textSize="30sp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Disease"
                 android:textAppearance="@style/user_should" />
 
             <TextView

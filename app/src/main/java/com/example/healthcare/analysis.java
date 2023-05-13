@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
+import java.util.concurrent.Phaser;
+
 public class analysis extends AppCompatActivity {
 
     private Button Yes;
@@ -16,7 +19,9 @@ public class analysis extends AppCompatActivity {
     private TextView Question;
     private Boolean Response;
     private int i=0;
+    private int counter=0;
     private int phase=1;
+    private int illness=1;
 
     private String Question_current;
     private int Health_Score=10;
@@ -53,6 +58,8 @@ public class analysis extends AppCompatActivity {
 
     private String questions[] = {"is Your Mood Off?","Are you experiencing any physical symptoms such as pain, fever, cough, or fatigue?","Are you experiencing persistent feelings of sadness, hopelessness, or emptiness that interfere with your daily life?"};
     private Boolean answers[] = new Boolean[10];
+    private String symptoms[] = new String[10];
+    private int symptoms_index = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,26 +76,298 @@ public class analysis extends AppCompatActivity {
         Yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter++;
                 Response=true;
-                saveAnswer();
-                displayNextQuestion();
+                if(counter>10){
+                    ResultOut(checkResult(true));
+                }
+                if(phase==1){
+                    saveAnswer();
+                    displayNextQuestion();
+                }
+                if(phase==2){
+                    displayMentalIllness();
+                }
+                if(phase==3){
+                    displayPhysicalIllness();
+                }
+                if(checkResult(false)!=null){
+                    ResultOut(checkResult(false));
+                }
             }
         });
         No.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter++;
                 Response=false;
-                saveAnswer();
-                displayNextQuestion();
+                if(counter>10){
+                    ResultOut(checkResult(true));
+                }
+                if(phase==1){
+                    saveAnswer();
+                    displayNextQuestion();
+                }
+                if(phase==2){
+                    displayMentalIllness();
+                }
+                if(phase==3){
+                    displayPhysicalIllness();
+                }
+                if(checkResult(false)!=null){
+                    ResultOut(checkResult(false));
+                }
             }
         });
 
 
     }
 
+
+    private void ResultOut(String result_illness) {
+        Toast.makeText(this,"Result: "+result_illness,Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), Report.class);
+        intent.putExtra("report",result_illness);
+        startActivity(intent);
+        finish();
+    }
+
+    private String checkResult(boolean endTest) {
+        int max =-1;
+        if(endTest){
+            int arr[] = {Asthma,Diarrhoea,Artheries,Diabetes,Tuberculosis,Cancer,Malaria,Viral,Depression,Trauma};
+            Arrays.sort(arr);
+            max = arr[9];
+        }
+        if(Trauma>3 || Trauma == max){
+            return "Trauma";
+        }
+        if(Depression>3 || Depression==max){
+            return "Depression";
+        }
+        if(Viral>3 || Viral==max){
+            return "Viral";
+        }
+        if(Malaria>3||Malaria==max){
+            return "Malaria";
+        }
+        if(Cancer>3 || Cancer==max){
+            return "Cancer";
+        }
+        if(Tuberculosis>3 || Tuberculosis==max){
+            return "Tuberculosis";
+        }
+        if(Diabetes>3 || Diabetes==max){
+            return "Diabetes";
+        }
+        if(Artheries>3 || Artheries==max){
+            return "Artheries";
+        }
+        if(Asthma>3 || Asthma == max){
+            return "Asthma";
+        }
+        if(Diarrhoea>3 || Diarrhoea==max){
+            return "Diarrheoa";
+        }
+        return null;
+    }
+
     private void displayQuestion() {
         Question.setText(questions[i]);
     }
+
+    private void displayMentalIllness() {
+        if(illness == 1){
+            if(Depression<Depression_Array.length){
+                Question.setText(Depression_Array[Depression]);
+                String mew = Depression+"";
+                Toast.makeText(this,mew,Toast.LENGTH_SHORT).show();
+
+            }
+            else{
+                Toast.makeText(this,"Depression",Toast.LENGTH_SHORT).show();
+            }
+        }
+        else if(illness == 2){
+            if(Trauma<Trauma_Array.length){
+                Question.setText(Trauma_Array[Trauma]);
+                String mew = Trauma+"";
+                Toast.makeText(this,mew,Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(this,"Trauma",Toast.LENGTH_SHORT).show();
+            }
+        }
+        else{
+            illness=0;
+            phase = 3;
+        }
+        savesymptom();
+    }
+
+    private void savesymptom() {
+        Boolean answer = Response;
+        if(answer){
+            if(illness==1){
+                symptoms[symptoms_index] = Depression_Array[Depression];
+                symptoms_index++;
+                Depression++;
+            }
+            if(illness==2){
+                symptoms[symptoms_index] = Trauma_Array[Trauma];
+                symptoms_index++;
+                Trauma++;
+            }
+        }
+        else{
+            illness++;
+        }
+    }
+
+
+
+    private void displayPhysicalIllness() {
+        if(illness == 1){
+            if(Viral<Viral_Array.length){
+                Question.setText(Viral_Array[Viral]);
+                String mew = Viral+"";
+                Toast.makeText(this,"Viral ->"+ mew,Toast.LENGTH_SHORT).show();
+
+            }
+            else{
+                Toast.makeText(this,"Viral",Toast.LENGTH_SHORT).show();
+            }
+        }
+        else if(illness ==2 ){
+            if(Malaria<Malaria_Array.length){
+                Question.setText(Malaria_Array[Malaria]);
+                String mew = Malaria+"";
+                Toast.makeText(this,"Malaria ->"+ mew,Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(this,"Malaria",Toast.LENGTH_SHORT).show();
+            }
+        }
+        else if(illness ==3 ){
+            if(Diarrhoea<Diarrhoea_Array.length){
+                Question.setText(Diarrhoea_Array[Diarrhoea]);
+                String mew = Diarrhoea+"";
+                Toast.makeText(this,"Diarrhoea ->"+ mew,Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(this,"Diarrhoea",Toast.LENGTH_SHORT).show();
+            }
+        }
+        else if(illness ==4 ){
+            if(Asthma<Asthma_Array.length){
+                Question.setText(Asthma_Array[Asthma]);
+                String mew = Asthma+"";
+                Toast.makeText(this,"Asthma ->"+ mew,Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(this,"Asthma",Toast.LENGTH_SHORT).show();
+            }
+        }
+        else if(illness ==5 ){
+            if(Tuberculosis<Tuberculosis_Array.length){
+                Question.setText(Tuberculosis_Array[Tuberculosis]);
+                String mew = Tuberculosis+"";
+                Toast.makeText(this,"Tuberculosis ->"+ mew,Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(this,"Tuberculosis",Toast.LENGTH_SHORT).show();
+            }
+        }
+        else if(illness ==6 ){
+            if(Diabetes<Diabetes_Array.length){
+                Question.setText(Diabetes_Array[Diabetes]);
+                String mew = Diabetes+"";
+                Toast.makeText(this,"Diabetes ->"+ mew,Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(this,"Diabetes",Toast.LENGTH_SHORT).show();
+            }
+        }
+        else if(illness ==7 ){
+            if(Cancer<Cancer_Array.length){
+                Question.setText(Cancer_Array[Cancer]);
+                String mew = Cancer+"";
+                Toast.makeText(this,"Cancer ->"+ mew,Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(this,"Cancer",Toast.LENGTH_SHORT).show();
+            }
+        }
+        else if(illness == 8){
+            if(Artheries<Artheries_Array.length){
+                Question.setText(Artheries_Array[Artheries]);
+                String mew = Artheries+"";
+                Toast.makeText(this,"Artheries ->"+ mew,Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(this,"Artheries",Toast.LENGTH_SHORT).show();
+            }
+        }
+        else{
+            Toast.makeText(this,"Confused",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,illness+"",Toast.LENGTH_SHORT).show();
+        }
+        savesymptom_physical();
+
+    }
+
+    private void savesymptom_physical() {
+        Boolean answer = Response;
+        Toast.makeText(this,answer+"",Toast.LENGTH_SHORT).show();
+        if(answer){
+            if(illness==1){
+                symptoms[symptoms_index] = Viral_Array[Viral];
+                symptoms_index++;
+                Viral++;
+            }
+            if(illness==2){
+                symptoms[symptoms_index] = Malaria_Array[Malaria];
+                symptoms_index++;
+                Malaria++;
+            }
+            if(illness==3){
+                symptoms[symptoms_index] = Diarrhoea_Array[Diarrhoea];
+                symptoms_index++;
+                Diarrhoea++;
+            }
+            if(illness==4){
+                symptoms[symptoms_index] = Asthma_Array[Asthma];
+                symptoms_index++;
+                Asthma++;
+            }
+            if(illness==5){
+                symptoms[symptoms_index] = Tuberculosis_Array[Tuberculosis];
+                symptoms_index++;
+                Tuberculosis++;
+            }
+            if(illness==6){
+                symptoms[symptoms_index] = Diabetes_Array[Diabetes];
+                symptoms_index++;
+                Diabetes++;
+            }
+            if(illness==7){
+                symptoms[symptoms_index] = Cancer_Array[Cancer];
+                symptoms_index++;
+                Cancer++;
+            }
+            if(illness==8){
+                symptoms[symptoms_index] = Artheries_Array[Artheries];
+                symptoms_index++;
+                Artheries++;
+            }
+        }
+        else{
+            Toast.makeText(this,"illness++",Toast.LENGTH_SHORT).show();
+            illness++;
+        }
+    }
+
+
     private void saveAnswer() {
         Boolean answer = Response;
         answers[i] = answer;
@@ -99,7 +378,21 @@ public class analysis extends AppCompatActivity {
             displayQuestion();
         } else {
             // All questions have been answered, do something with the answers here
+            Question.setText("...");
             Toast.makeText(this, "All questions have been answered", Toast.LENGTH_SHORT).show();
+            setPhase();
+        }
+    }
+
+    private void setPhase() {
+        if(!answers[1] && answers[2]){
+            phase = 2; // mental_illness
+        }
+        if(answers[1] && !answers[2]){
+            phase = 3; // mental_illness
+        }
+        if(answers[1] == answers[2]){
+            phase = 2; // mental_illness
         }
     }
 }

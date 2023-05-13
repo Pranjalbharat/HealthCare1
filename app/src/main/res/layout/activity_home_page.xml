@@ -30,11 +30,11 @@
             <TextView
                 android:id="@+id/suggested_doctor_text"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="50dp"
                 android:background="@color/black"
-                android:gravity="center"
-                android:padding="16dp"
-                android:text="Suggested Doctor"
+                android:layout_marginLeft="10dp"
+                android:gravity="start"
+                android:text="@string/suggested_doctor"
                 android:textColor="@color/white"
                 android:textSize="28sp"
                 android:textStyle="bold" />
@@ -51,7 +51,6 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
-                    android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
                     <!-- First CardView -->
@@ -69,15 +68,15 @@
                             android:layout_height="wrap_content"
                             android:background="@color/black"
                             android:padding="8dp">
-
                             <ImageButton
                                 android:id="@+id/imageview"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-
                                 android:layout_centerHorizontal="true"
-                                android:background="@drawable/circular_button_background"
-                                android:scaleType="centerCrop"
+                                android:cropToPadding="false"
+                                android:adjustViewBounds="false"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:src="@drawable/d1" />
 
                             <TextView
@@ -114,9 +113,9 @@
                                 android:id="@+id/imageview2"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@drawable/circular_button_background"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
                                 android:src="@drawable/d2" />
 
                             <TextView
@@ -152,9 +151,9 @@
                                 android:id="@+id/imageview3"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
                                 android:src="@drawable/d3" />
 
                             <TextView
@@ -190,9 +189,9 @@
                                 android:id="@+id/imageview4"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:src="@drawable/d4" />
 
                             <TextView
@@ -228,9 +227,9 @@
                                 android:id="@+id/imageview5"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:src="@drawable/d5" />
 
                             <TextView
@@ -267,9 +266,9 @@
                                 android:id="@+id/imageview6"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:src="@drawable/d6" />
 
                             <TextView
@@ -306,9 +305,9 @@
                                 android:id="@+id/imageview7"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:src="@drawable/d7" />
 
                             <TextView
@@ -345,9 +344,9 @@
                                 android:id="@+id/imageview8"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:src="@drawable/d8" />
 
                             <TextView
@@ -384,9 +383,9 @@
                                 android:id="@+id/imageview9"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:src="@drawable/d9" />
 
                             <TextView
@@ -422,9 +421,9 @@
                                 android:id="@+id/imageview10"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:src="@drawable/d0" />
 
                             <TextView
@@ -467,9 +466,9 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/ellipse_2"
-                        android:padding="8dp"
-                        android:src="@drawable/ellipse_2" />
+                        android:scaleType="fitCenter"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/d8" />
 
 
                     <!-- Nested LinearLayout for Name and Profession -->
@@ -571,9 +570,9 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/ellipse_2"
-                        android:padding="8dp"
-                        android:src="@drawable/ellipse_2" />
+                        android:scaleType="fitCenter"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/d7" />
 
 
                     <!-- Nested LinearLayout for Name and Profession -->
@@ -675,9 +674,9 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/ellipse_2"
-                        android:padding="8dp"
-                        android:src="@drawable/ellipse_2" />
+                        android:scaleType="fitCenter"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/d6" />
 
 
                     <!-- Nested LinearLayout for Name and Profession -->
@@ -779,9 +778,9 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/ellipse_2"
-                        android:padding="8dp"
-                        android:src="@drawable/ellipse_2" />
+                        android:scaleType="fitCenter"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/d4" />
 
 
                     <!-- Nested LinearLayout for Name and Profession -->
@@ -883,9 +882,9 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/ellipse_2"
-                        android:padding="8dp"
-                        android:src="@drawable/ellipse_2" />
+                        android:scaleType="fitCenter"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/d2" />
 
 
                     <!-- Nested LinearLayout for Name and Profession -->
@@ -987,9 +986,9 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/ellipse_2"
-                        android:padding="8dp"
-                        android:src="@drawable/ellipse_2" />
+                        android:scaleType="fitCenter"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/d6" />
 
 
                     <!-- Nested LinearLayout for Name and Profession -->
@@ -1091,9 +1090,9 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/ellipse_2"
-                        android:padding="8dp"
-                        android:src="@drawable/ellipse_2" />
+                        android:scaleType="fitCenter"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/d1" />
 
 
                     <!-- Nested LinearLayout for Name and Profession -->
@@ -1195,9 +1194,9 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/ellipse_2"
-                        android:padding="8dp"
-                        android:src="@drawable/ellipse_2" />
+                        android:scaleType="fitCenter"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/d7" />
 
 
                     <!-- Nested LinearLayout for Name and Profession -->
@@ -1299,9 +1298,9 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="25dp"
-                        android:background="@drawable/ellipse_2"
-                        android:padding="8dp"
-                        android:src="@drawable/ellipse_2" />
+                        android:scaleType="fitCenter"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/d4" />
 
 
                     <!-- Nested LinearLayout for Name and Profession -->
