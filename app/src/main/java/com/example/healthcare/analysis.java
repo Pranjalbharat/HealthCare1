@@ -128,9 +128,24 @@ public class analysis extends AppCompatActivity {
         Toast.makeText(this,"Result: "+result_illness,Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), Report.class);
         intent.putExtra("report",result_illness);
+        intent.putExtra("symptoms",setSymptomString());
         startActivity(intent);
         finish();
     }
+
+    private String setSymptomString() {
+        String pass_result="";
+        for (int j = 0; j < symptoms.length; j++) {
+            if(symptoms[j]==null){
+                break;
+            }
+            else{
+                pass_result = pass_result+symptoms[j]+"\n";
+            }
+        }
+        return pass_result;
+    }
+
 
     private String checkResult(boolean endTest) {
         int max =-1;

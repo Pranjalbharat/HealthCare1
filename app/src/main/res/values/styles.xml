@@ -26,6 +26,11 @@
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
+    <style name="name_4">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">#FFC107</item>
+    </style>
+
     <!-- strings.xml -->
     <string name="user_should">
 User should seek medical advice.
