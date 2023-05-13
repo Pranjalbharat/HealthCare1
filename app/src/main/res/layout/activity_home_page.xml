@@ -74,10 +74,9 @@
                                 android:id="@+id/imageview"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-
                                 android:layout_centerHorizontal="true"
-                                android:background="@drawable/circular_button_background"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:src="@drawable/d8" />
 
                             <TextView
@@ -114,9 +113,10 @@
                                 android:id="@+id/imageview2"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@drawable/circular_button_background"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+
                                 android:src="@drawable/d2" />
 
                             <TextView
@@ -152,9 +152,9 @@
                                 android:id="@+id/imageview3"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
                                 android:src="@drawable/d3" />
 
                             <TextView
@@ -190,9 +190,9 @@
                                 android:id="@+id/imageview4"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:src="@drawable/d4" />
 
                             <TextView
@@ -228,9 +228,9 @@
                                 android:id="@+id/imageview5"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:src="@drawable/d5" />
 
                             <TextView
@@ -267,9 +267,10 @@
                                 android:id="@+id/imageview6"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+
                                 android:src="@drawable/d6" />
 
                             <TextView
@@ -306,9 +307,10 @@
                                 android:id="@+id/imageview7"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+
                                 android:src="@drawable/d7" />
 
                             <TextView
@@ -345,9 +347,9 @@
                                 android:id="@+id/imageview8"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:src="@drawable/d1" />
 
                             <TextView
@@ -384,9 +386,9 @@
                                 android:id="@+id/imageview9"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
                                 android:src="@drawable/d9" />
 
                             <TextView
@@ -422,9 +424,9 @@
                                 android:id="@+id/imageview10"
                                 android:layout_width="64dp"
                                 android:layout_height="50dp"
-                                android:background="@color/black"
+                                android:scaleType="fitCenter"
+                                android:background="?attr/selectableItemBackgroundBorderless"
                                 android:layout_centerHorizontal="true"
-                                android:scaleType="centerCrop"
                                 android:src="@drawable/d0" />
 
                             <TextView
