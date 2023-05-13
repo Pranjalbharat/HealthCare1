@@ -30,11 +30,11 @@
             <TextView
                 android:id="@+id/suggested_doctor_text"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="50dp"
                 android:background="@color/black"
-                android:gravity="center"
-                android:padding="16dp"
-                android:text="Suggested Doctor"
+                android:layout_marginLeft="10dp"
+                android:gravity="start"
+                android:text="@string/suggested_doctor"
                 android:textColor="@color/white"
                 android:textSize="28sp"
                 android:textStyle="bold" />
