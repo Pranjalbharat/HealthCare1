@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 
 public class HomePage extends AppCompatActivity {
     private ImageButton Doctor_profile;
+    private ImageButton Doctor_profile2;
     private ImageButton Chat_message;
     private Button Test;
 
@@ -19,6 +20,7 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         Doctor_profile=findViewById(R.id.imageview);
+        Doctor_profile2=findViewById(R.id.imageview2);
         Chat_message=findViewById(R.id.chat_button);
         Test = findViewById(R.id.center_button);
 
@@ -29,6 +31,16 @@ public class HomePage extends AppCompatActivity {
                 startActivity(new Intent(HomePage.this, Doctor_profile.class));
             }
         });
+
+
+
+        Doctor_profile2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomePage.this, Doctor_profile2.class));
+            }
+        });
+
 
 
         Chat_message.setOnClickListener(new View.OnClickListener() {
