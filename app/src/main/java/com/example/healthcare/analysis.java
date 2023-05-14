@@ -125,7 +125,7 @@ public class analysis extends AppCompatActivity {
 
 
     private void ResultOut(String result_illness) {
-        Toast.makeText(this,"Result: "+result_illness,Toast.LENGTH_SHORT).show();
+
         Intent intent = new Intent(getApplicationContext(), Report.class);
         intent.putExtra("report",result_illness);
         intent.putExtra("symptoms",setSymptomString());
@@ -196,21 +196,21 @@ public class analysis extends AppCompatActivity {
             if(Depression<Depression_Array.length){
                 Question.setText(Depression_Array[Depression]);
                 String mew = Depression+"";
-                Toast.makeText(this,mew,Toast.LENGTH_SHORT).show();
+
 
             }
             else{
-                Toast.makeText(this,"Depression",Toast.LENGTH_SHORT).show();
+
             }
         }
         else if(illness == 2){
             if(Trauma<Trauma_Array.length){
                 Question.setText(Trauma_Array[Trauma]);
                 String mew = Trauma+"";
-                Toast.makeText(this,mew,Toast.LENGTH_SHORT).show();
+
             }
             else{
-                Toast.makeText(this,"Trauma",Toast.LENGTH_SHORT).show();
+
             }
         }
         else{
@@ -246,86 +246,85 @@ public class analysis extends AppCompatActivity {
             if(Viral<Viral_Array.length){
                 Question.setText(Viral_Array[Viral]);
                 String mew = Viral+"";
-                Toast.makeText(this,"Viral ->"+ mew,Toast.LENGTH_SHORT).show();
+
 
             }
             else{
-                Toast.makeText(this,"Viral",Toast.LENGTH_SHORT).show();
+
             }
         }
         else if(illness ==2 ){
             if(Malaria<Malaria_Array.length){
                 Question.setText(Malaria_Array[Malaria]);
                 String mew = Malaria+"";
-                Toast.makeText(this,"Malaria ->"+ mew,Toast.LENGTH_SHORT).show();
+
             }
             else{
-                Toast.makeText(this,"Malaria",Toast.LENGTH_SHORT).show();
+
             }
         }
         else if(illness ==3 ){
             if(Diarrhoea<Diarrhoea_Array.length){
                 Question.setText(Diarrhoea_Array[Diarrhoea]);
                 String mew = Diarrhoea+"";
-                Toast.makeText(this,"Diarrhoea ->"+ mew,Toast.LENGTH_SHORT).show();
+
             }
             else{
-                Toast.makeText(this,"Diarrhoea",Toast.LENGTH_SHORT).show();
+
             }
         }
         else if(illness ==4 ){
             if(Asthma<Asthma_Array.length){
                 Question.setText(Asthma_Array[Asthma]);
                 String mew = Asthma+"";
-                Toast.makeText(this,"Asthma ->"+ mew,Toast.LENGTH_SHORT).show();
+
             }
             else{
-                Toast.makeText(this,"Asthma",Toast.LENGTH_SHORT).show();
+
             }
         }
         else if(illness ==5 ){
             if(Tuberculosis<Tuberculosis_Array.length){
                 Question.setText(Tuberculosis_Array[Tuberculosis]);
                 String mew = Tuberculosis+"";
-                Toast.makeText(this,"Tuberculosis ->"+ mew,Toast.LENGTH_SHORT).show();
+
             }
             else{
-                Toast.makeText(this,"Tuberculosis",Toast.LENGTH_SHORT).show();
+
             }
         }
         else if(illness ==6 ){
             if(Diabetes<Diabetes_Array.length){
                 Question.setText(Diabetes_Array[Diabetes]);
                 String mew = Diabetes+"";
-                Toast.makeText(this,"Diabetes ->"+ mew,Toast.LENGTH_SHORT).show();
+
             }
             else{
-                Toast.makeText(this,"Diabetes",Toast.LENGTH_SHORT).show();
+
             }
         }
         else if(illness ==7 ){
             if(Cancer<Cancer_Array.length){
                 Question.setText(Cancer_Array[Cancer]);
                 String mew = Cancer+"";
-                Toast.makeText(this,"Cancer ->"+ mew,Toast.LENGTH_SHORT).show();
+
             }
             else{
-                Toast.makeText(this,"Cancer",Toast.LENGTH_SHORT).show();
+
             }
         }
         else if(illness == 8){
             if(Artheries<Artheries_Array.length){
                 Question.setText(Artheries_Array[Artheries]);
                 String mew = Artheries+"";
-                Toast.makeText(this,"Artheries ->"+ mew,Toast.LENGTH_SHORT).show();
+
             }
             else{
-                Toast.makeText(this,"Artheries",Toast.LENGTH_SHORT).show();
+
             }
         }
         else{
-            Toast.makeText(this,"Confused",Toast.LENGTH_SHORT).show();
-            Toast.makeText(this,illness+"",Toast.LENGTH_SHORT).show();
+
         }
         savesymptom_physical();
 
@@ -377,7 +376,7 @@ public class analysis extends AppCompatActivity {
             }
         }
         else{
-            Toast.makeText(this,"illness++",Toast.LENGTH_SHORT).show();
+
             illness++;
         }
     }
@@ -394,7 +393,7 @@ public class analysis extends AppCompatActivity {
         } else {
             // All questions have been answered, do something with the answers here
             Question.setText("...");
-            Toast.makeText(this, "All questions have been answered", Toast.LENGTH_SHORT).show();
+
             setPhase();
         }
     }
